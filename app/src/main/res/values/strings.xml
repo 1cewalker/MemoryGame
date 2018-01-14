@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Memory Game</string>
+    <string name="top_score">High Score</string>
+    <string name="enter_name_hint">Name</string>
+    <string name="enter_name_title">Enter name for high score</string>
+    <string name="ok">Ok</string>
+
+    <string name="highscore_title">High Score</string>
+    <string name="highscore_rank_label">Rank</string>
+    <string name="highscore_name_label">Name</string>
+    <string name="highscore_score_label">Score</string>
+
+</resources>

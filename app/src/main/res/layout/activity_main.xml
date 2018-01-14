@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.accedo.game.memory.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/tvCurrentScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="0"/>
+
+
+        <Button
+            android:id="@+id/btn_topscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text = "@string/top_score"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ivCard_0"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ivCard_4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ivCard_8"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_10"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_11"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ivCard_12"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_13"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_14"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+            <ImageButton
+                android:id="@+id/ivCard_15"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/card_bg"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
