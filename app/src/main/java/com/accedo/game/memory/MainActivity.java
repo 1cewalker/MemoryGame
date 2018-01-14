@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.accedo.game.memory.database.DatabaseController;
+import com.accedo.game.memory.database.EntityUser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -214,6 +215,22 @@ public class MainActivity extends AppCompatActivity {
         btnCard.setOnClickListener(null);
     }
 
+
+    private void showDialogUserCurrentRank(final int rank){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setCancelable(false);
+        builder.setTitle(R.string.current_rank_title);
+        builder.setMessage(String.format(getString(R.string.current_rank_msg),score,rank));
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                init();
+            }
+        });
+        builder.show();
+    }
+
     private void showDialogForHighScore() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -227,22 +244,41 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        String strName = name.getText().toString();
+                        final String strName = name.getText().toString();
                         if (TextUtils.isEmpty(strName.trim())) {
                             showDialogForHighScore();
                         } else {
-                            new AsyncTask<Void, Void, Void>() {
+                            new AsyncTask<Void, Void, Integer>() {
                                 @Override
-                                protected Void doInBackground(Void... voids) {
+                                protected Integer doInBackground(Void... voids) {
                                     databaseController.addUser(name.getText().toString(), score);
-                                    return null;
+
+                                    List<EntityUser> users = databaseController.getAllUsers();
+
+                                    int rank = getRank(users, strName, score);
+
+                                    return rank;
                                 }
 
                                 @Override
-                                protected void onPostExecute(Void aVoid) {
-                                    super.onPostExecute(aVoid);
+                                protected void onPostExecute(Integer rank) {
+                                    super.onPostExecute(rank);
 
-                                    init();
+                                    showDialogUserCurrentRank(rank);
+                                }
+
+                                private int getRank(List<EntityUser> users, String name, int score){
+                                    int rank = 0;
+
+                                    for(int i=0; i<users.size(); i++){
+                                        EntityUser user = users.get(i);
+                                        if(user.name.equals(name) && user.score == score){
+                                            rank = i+1;
+                                        }
+                                    }
+
+                                    return rank;
+
                                 }
                             }.execute();
 
@@ -253,4 +289,5 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
 
     }
+
 }

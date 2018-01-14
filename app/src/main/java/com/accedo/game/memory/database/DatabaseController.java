@@ -36,6 +36,10 @@ public class DatabaseController {
         return userDao.getHighScoreUsers();
     }
 
+    public List<EntityUser> getAllUsers() {
+        return userDao.getAllUsers();
+    }
+
     public void addUser(String name, int score) {
         EntityUser user = new EntityUser();
         user.name = name;

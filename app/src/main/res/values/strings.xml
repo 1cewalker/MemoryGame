@@ -10,4 +10,7 @@
     <string name="highscore_name_label">Name</string>
     <string name="highscore_score_label">Score</string>
 
+    <string name="current_rank_title">Current Rank</string>
+    <string name="current_rank_msg">Your score is %d and your rank is %d</string>
+
 </resources>
